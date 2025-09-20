@@ -1,43 +1,50 @@
 package main
 
-// maps -> hash, object, dict
 func main() {
-	// creating map
+	// Creating a map
+	m := make(map[string]string)
 
-	// m := make(map[string]string)
+	// Setting elements
+	m["name"] = "golang"
+	m["area"] = "backend"
 
-	// setting an element
-	// m["name"] = "golang"
-	// m["area"] = "backend"
+	// Getting elements
+	// If key does not exist, returns zero value
+	println(m["name"], m["area"])
 
-	// get an element
-	// fmt.Println(m["name"], m["area"])
-	// IMP: if key does not exists in the map then it returns zero value
+	m2 := make(map[string]int)
+	m2["age"] = 30
+	m2["price"] = 50
+	println(m2["phone"])
+	println(len(m2))
 
-	// m := make(map[string]int)
-	// m["age"] = 30
-	// m["price"] = 50
-	// fmt.Println(m["phone"])
-	// fmt.Println(len(m))
+	// Deleting an element
+	delete(m2, "price")
 
-	// delete(m, "price")
-	// clear(m)
+	// Initializing map with values
+	m3 := map[string]int{"price": 40, "phones": 3}
 
-	// fmt.Println(m)
-	// fmt.Println(m)
+	// Checking if key exists
+	v, ok := m3["phones"]
+	println(v)
+	if ok {
+		println("all ok")
+	} else {
+		println("not ok")
+	}
 
-	// m := map[string]int{"price": 40, "phones": 3}
+	m1 := map[string]int{"price": 40, "phones": 3}
+	m4 := map[string]int{"price": 40, "phones": 8}
 
-	// v, ok := m["phones"]
-	// fmt.Println(v)
-	// if ok {
-	// 	fmt.Println("all ok")
-	// } else {
-	// 	fmt.Println("not ok")
-	// }
+	println(m1 == nil)
+	println(m4 == nil)
 
-	// m1 := map[string]int{"price": 40, "phones": 3}
-	// m2 := map[string]int{"price": 40, "phones": 8}
-	// fmt.Println(maps.Equal(m1, m2))
+	m5 := m1
+	m5["price"] = 100
+	println(m1["price"])
+	println(m5["price"])
 
+	for key, value := range m1 {
+		println(key, value)
+	}
 }
