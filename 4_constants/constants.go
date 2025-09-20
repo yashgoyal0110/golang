@@ -2,14 +2,13 @@ package main
 
 import "fmt"
 
-// const age = 30
 
 func main() {
 	// :=
 	// const name = "golang"
-	// const age = 30
+	const age = 30
 
-	// fmt.Println(age)
+	fmt.Println(age)
 
 	const (
 		port = 5000
