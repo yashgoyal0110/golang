@@ -66,7 +66,7 @@ func (tm *TaskManager) ListTasks() []Task {
 	return tm.Tasks
 }
 
-func main() {
+func test() {
 	filename := "tasks.json"
 	manager := &TaskManager{}
 	manager.Load(filename)
